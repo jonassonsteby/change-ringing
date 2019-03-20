@@ -7,11 +7,9 @@ Find change ringing sequences with cr.py
 - Find some of the sequences for 5,6,7,8 and 9 bells. For a given number of
   bells, the `findAll` method starts with finding all sequences of length 1,
   then moves on to sequences of length 2 and so on. The sequences of length L
-  is used to find the sequences of length L+1. If you only want to find
-  sequences of a specific length L, you can you use the `findOne` method to
-  skip writing the sequences with length < L to file.
+  is used to find the sequences of length L+1.
 - Categorize sequences into separate files by number of bells (n), sequence
-  length (L) and sequence type (cyclic, path, noncappable).
+  length (L) and sequence type.
 - Choose any starting permutation. Use any string of n unique characters. 1
   char = 1 bell. If there are more than one of any of the characters, you will
   get faulty results.
@@ -120,15 +118,15 @@ Change ringing is a very specific way of making music with an arbitrary
 (natural) number of uniquely pitched bells (labeled with the numbers 1,2,...,n
 in descending order of pitch). The bells are rung only one at the time in rapid
 succession with regular time intervals. No bell is allowed to ring again before
-all bells have been rung. Thus this kind of music consists of sequences of what
-is called _changes_, _rows_ or _permutations_, that is, the act of ringing
+all bells have been rung. Thus a piece of this music consists of a sequence of
+what is called _changes_, _rows_ or _permutations_, that is, the act of ringing
 through all the n bells once in some order. All permutations are allowed, but
 not all sequences of permutations are allowed. For starters, you cannot repeat
 a previously rung permutation within a sequence, which gives these sequences a
 maximum length of factorial(n). Still, most of the sequences satisfying this
-criterion are not allowed due to several more criteria. Let us take a look at
-a complete definition to see exactly what types of sequences of permutations
-that are allowed in change ringing.
+criterion are not allowed due to several more criteria. Let us take a look at a
+complete definition to see exactly what types of sequences of permutations that
+are allowed in change ringing.
 
 Let n be a positive integer. A ___change ringing sequence for n bells___ is a
 sequence of permutations of the set {1,2,...,n} that satisfies the following
@@ -161,8 +159,7 @@ We define a ___cyclic sequence___ as a sequence that satisfies criterion
 1,2,3,4. These sequences start and end with (1,2,...,n).
 
 We define a ___path sequence___ as a sequence that satisfies criterion 1,2,3
-and __not__ 4. None of the path sequences are cyclic, but every cyclic sequence
-becomes a path sequence if you remove it's ending permutation.
+and __not__ 4.
 
 We define a ___noncappable sequence___ as a path sequence that has an ending
 permutation that cannot immeadiately transition to the starting permutation.
