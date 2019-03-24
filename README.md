@@ -1,7 +1,16 @@
-Find change ringing sequences with cr.py
+Table of contents
+=================
+1. [Find change ringing sequences with cr.py](#crpy)
+2. [Find change ringing transition rules with tr.py](#trpy)
+3. [What is change ringing?](#whatis)
+4. [Resources](#resources)
+
+
+Find change ringing sequences with cr.py <a name="crpy"></a>
 ========================================
 
-#### Features
+Features
+--------
 
 - Find all change ringing sequences of all lengths for 1,2,3 and 4 bells.
 - Find some of the sequences for 5,6,7,8 and 9 bells. For a given number of
@@ -14,7 +23,8 @@ Find change ringing sequences with cr.py
   char = 1 bell. If there are more than one of any of the characters, you will
   get faulty results.
 
-#### Limitations
+Limitations
+-----------
 
 - Prone to gobble up memory when n > 4. You should therefore be conservative
   with the sequence length (L) when n > 4. On my 8 GB RAM laptop I observed the
@@ -65,7 +75,7 @@ where
   - Set `option=2` to find noncappable sequences.
 
 
-Find change ringing transition rules with tr.py
+Find change ringing transition rules with tr.py <a name="trpy"></a>
 ===============================================
 Run
 
@@ -82,7 +92,7 @@ If you are only looking for the _number of_ allowable transition rules, then you
 should rather take a look at [http://oeis.org/A000071](http://oeis.org/A000071) (__spoiler alert!__).
 
 
-What is change ringing?
+What is change ringing? <a name="whatis"></a>
 =======================
 
 Examples of change ringing sequences for 3,4 and 5 bells respectively.
@@ -197,7 +207,7 @@ permutations tends to zero as n tends to infinity
 ((n+1)-th element of [A000071](http://oeis.org/A000071) divided by factorial(n)).
 
 
-Resources
+Resources <a name="resources"></a>
 =========
 
 [Video (6:28) from Simons Foundation](https://www.youtube.com/watch?v=3lyDCUKsWZs)
